@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학번</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='susers.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>앱 홈페이지에 온 것을 환영합니다! </h1>
+        </header>
+        <main>
+            <a href="{{ url_for('users') }}" class="card large">
+                <p>배우고 싶어요!</p>
+                <h2>선배 찾기</h2>
+            </a>
+            <a href="교실현황.html" class="card medium">
+                <p>교실 현황 체크</p>
+                <h2>교실 현황</h2>
+            </a>
+            <a href="GloNaCal.html" class="card medium">
+                <p>나의 글로네이컬</p>
+                <h2><span class="glonacal">GloNaCal</span> 확인하기</h2>
+            </a>
+            <a href="퀵르넥트.html" class="card medium">
+                <p>빠르게 질문하고 싶어요</p>
+                <h2>퀵 르넥트</h2>
+            </a>
+        </main>
+        <footer>
+            <p>활동 서류 발급받자!</p>
+            <div class="certificate">
+                <h2>학교 공식<br>이수증 출력하기</h2>
+                <a href="이수증.html"><button>PDF 다운받기</button></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

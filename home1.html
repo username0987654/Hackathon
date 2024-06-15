@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <script src="https://kit.fontawesome.com/kit_code.js" crossorigin="anonymous"></script>
+    <title>HOME</title>
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="navbar__logo">
+            <i class="fas fa-blog"></i>
+            <a href="">선후배 멘토링</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="{{ url_for('signup') }}">sign up</a></li>
+            <li><a href="{{ url_for('login') }}">login</a></li>
+            <li><a href="#">선배들 보기</a></li>
+        </ul>
+
+        <ul class="navbar__icons">
+            <li><i class="fab fa-google"></i></li>
+            <li><i class="fab fa-slack"></i></li>
+        </ul>
+
+        <a href="#" class="navbar__toggleBtn">
+            <i class="fas fa-hamburger"></i>
+        </a>
+    </nav>
+
+    <div class="home-container">
+        <h1>환영합니다!</h1>
+        <p>멘토라면 웹사이트를 사용하기 위해서 로그인/회원가입 해주세요.</p>
+        <div class="buttons">
+            <a href="{{ url_for('signup') }}" class="btn">sign up</a>
+            <a href="{{ url_for('login') }}" class="btn">login</a>
+            <a href="{{ url_for('nhome') }}" class="btn">멘티신가요?</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleBtn = document.querySelector('.navbar__toggleBtn');
+            const menu = document.querySelector('.navbar__menu');
+
+            toggleBtn.addEventListener('click', function() {
+                menu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+

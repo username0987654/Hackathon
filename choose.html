@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과목 선택</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subject-category {
+            margin-bottom: 40px;
+        }
+
+        .subjects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .subject-btn {
+            background-color: #9bb9ff;
+            border: none;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subject-btn:hover {
+            background-color: #728eff;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>저는 이걸 가르치고 싶어요!</h1>
+        
+        <div class="subject-category">
+            <h2>국어 과목</h2>
+            <div class="subjects">
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="국어 고1">
+                    <button type="submit" class="subject-btn">국어 <br> 고1</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="문학 고2">
+                    <button type="submit" class="subject-btn">문학 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="독서 고2">
+                    <button type="submit" class="subject-btn">독서 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="토론실 고2">
+                    <button type="submit" class="subject-btn">토론실 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="작문의 실제 고2">
+                    <button type="submit" class="subject-btn">작문의 실제 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="21세기 문학탐구 고3">
+                    <button type="submit" class="subject-btn">21세기 문학탐구 <br> 고3</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="실용융합독서 고3">
+                    <button type="submit" class="subject-btn">실용융합독서 <br> 고3</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="subject-category">
+            <h2>수학 과목</h2>
+            <div class="subjects">
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="수학 (상) 고1">
+                    <button type="submit" class="subject-btn">수학 (상) <br> 고1</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="수학 (하) 고1">
+                    <button type="submit" class="subject-btn">수학 (하) <br> 고1</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="수학 1 고2">
+                    <button type="submit" class="subject-btn">수학 1 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="수학 2 고2">
+                    <button type="submit" class="subject-btn">수학 2 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="확률과 통계 고2">
+                    <button type="submit" class="subject-btn">확률과 통계 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="미적분 고2">
+                    <button type="submit" class="subject-btn">미적분 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="고급 수학 고3">
+                    <button type="submit" class="subject-btn">고급 수학 <br> 고3</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="기하 고3">
+                    <button type="submit" class="subject-btn">기하 <br> 고3</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="subject-category">
+            <h2>사회 과목</h2>
+            <div class="subjects">
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="통합사회 고1">
+                    <button type="submit" class="subject-btn">통합사회 <br> 고1</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="한국사 고1">
+                    <button type="submit" class="subject-btn">한국사 <br> 고1</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="경제 고2">
+                    <button type="submit" class="subject-btn">경제 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="생활과 윤리 고2">
+                    <button type="submit" class="subject-btn">생활과 윤리 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="정치와 법 고2">
+                    <button type="submit" class="subject-btn">정치와 법 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="세계지리 고2">
+                    <button type="submit" class="subject-btn">세계지리 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="세계사 고2">
+                    <button type="submit" class="subject-btn">세계사 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="윤리와 사상 고3">
+                    <button type="submit" class="subject-btn">윤리와 사상 <br> 고3</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="subject-category">
+            <h2>과학 과목</h2>
+            <div class="subjects">
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="통합과학 고1">
+                    <button type="submit" class="subject-btn">통합과학 <br> 고1</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="물리학 1 고2">
+                    <button type="submit" class="subject-btn">물리학 1 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="화학 1 고2">
+                    <button type="submit" class="subject-btn">화학 1 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="생명과학 1 고2">
+                    <button type="submit" class="subject-btn">생명과학 1 <br> 고2</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="물리학 2 고3">
+                    <button type="submit" class="subject-btn">물리학 2 <br> 고3</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="화학 2 고3">
+                    <button type="submit" class="subject-btn">화학 2 <br> 고3</button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="생명과학 2 고3">
+                    <button type="submit" class="subject-btn">생명과학 2 <br> 고3</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="subject-category">
+            <h2>영어 과목</h2>
+            <div class="subjects">
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="Buisiness Studies">
+                    <button type="submit" class="subject-btn">Buisiness Studies </button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="Intro Biology">
+                    <button type="submit" class="subject-btn">Intro Biology </button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="Intro Chemistry">
+                    <button type="submit" class="subject-btn">Intro Chemistry </button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="History & Int.Relations">
+                    <button type="submit" class="subject-btn">History & Int.Relations </button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="Academic Reading">
+                    <button type="submit" class="subject-btn">Academic Reading </button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="Liberal Arts">
+                    <button type="submit" class="subject-btn">Liberal Arts </button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="베 1">
+                    <button type="submit" class="subject-btn">베 1 </button>
+                </form>
+                <form action="{{ url_for('choose_subject') }}" method="POST">
+                    <input type="hidden" name="subject" value="베 2">
+                    <button type="submit" class="subject-btn">베 2 </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+    

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <h1>국어 과목 선택 완료!</h1>
+        <p>멘티가 찾을때까지 기다려주세요.</p>
+    </div>
+    <div class="buttons">
+        <a href="{{ url_for('nhome') }}" class="btn">홈으로 가기</a>
+    </div>
+</body>
+</html>

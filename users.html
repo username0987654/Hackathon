@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='hstyle.css') }}">
+</head>
+<body>
+    <div class="users-container">
+        <h2>Registered Users</h2>
+        <form method="GET" action="{{ url_for('users') }}">
+            <input type="text" name="search" placeholder="Search by username, email, or subject">
+            <button type="submit">Search</button>
+        </form>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Grade</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Actions</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.grade }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.subject }}</td>
+                <td>
+                    <a href="mailto:{{ user.email }}?subject=Mentoring Request&body=Dear {{ user.username }},%0D%0A%0D%0A{{ current_user.username }} wants to mentor you." target="_blank">
+                        <button type="button">멘토링 참가</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Subject</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='choose_subject.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <h1>sign up 완료!</h1>
+        <p>멘토링을 하고 싶은 과목을 골라주세요!</p>
+        <div class="buttons">
+            <form action="{{ url_for('choose_subject') }}" method="POST">
+                <input type="hidden" name="subject" value="수학">
+                <button type="submit" class="btn">수학</button>
+            </form>
+            <form action="{{ url_for('choose_subject') }}" method="POST">
+                <input type="hidden" name="subject" value="과학">
+                <button type="submit" class="btn">과학</button>
+            </form>
+            <form action="{{ url_for('choose_subject') }}" method="POST">
+                <input type="hidden" name="subject" value="국어">
+                <button type="submit" class="btn">국어</button>
+            </form>
+            <form action="{{ url_for('choose_subject') }}" method="POST">
+                <input type="hidden" name="subject" value="사회">
+                <button type="submit" class="btn">사회</button>
+            </form>
+            <form action="{{ url_for('choose_subject') }}" method="POST">
+                <input type="hidden" name="subject" value="영어">
+                <button type="submit" class="btn">영어</button>
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
